@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>primavera — sí y sin</title>
+    <meta
+      name="description"
+      content="sí y sin: a proposal for a small photographic exhibition on the upcoming edition of Primavera Sound"
+    />
+    <meta name="author" content="july jagt" />
+
+    <!-- <meta property="og:title" content="" />
+         <meta property="og:type" content="website" />
+         <meta
+         property="og:url"
+         content=""
+         />
+         <meta
+         property="og:description"
+         content=""
+         />
+         <meta property="og:image" content="" /> -->
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="normalize.css?v=1.0" />
+    <link rel="stylesheet" href="style.css?v=1.0" />
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body>
+    <div class="spacer-lg"></div>
+    <div class="container">
+      <h1 class="text-center">primavera — sí y sin</h1>
+      <p class="subheader">a letter from july to the organising team</p>
+      <div class="spacer"></div>
+
+      <p>
+        during Primavera Sound 2022, i took my fujifilm x100s to sunny
+        afternoons and starlit nights at Parc del Forum, and took a bunch of
+        pictures.
+
+        <br /><br />
+
+        looking at them, later, i wondered about all these people completely
+        filling up a place for three days, and then leaving it behind without
+        ever glancing back. some would go back to the ancient libraries of the
+        university; some might go back to their laptop jobs, in an office, at
+        home, or at a Sandwichez; others would board a plane (probably to the
+        UK), and continue their lives there. everyone's head would be filled
+        with memories of a vibrant, decorated, and jubilant primavera, the
+        concrete structures of Parc del Forum only a backdrop to vivid colours
+        and sounds.
+
+        <br /><br />
+
+        but what would this concrete park look like without the festival which
+        borrows its shapes every year? i wanted to explore this. i went back in
+        early february, and took the same pictures i had taken during the
+        festival itself.
+      </p>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div
+      x-data="{ names: [
+         'lantern',
+         'ramp-down',
+         'estrella',
+         'harbour',
+         'boiler-room',
+         'amfitheatre',
+         'entrance-floor',
+         'sunset',
+         ] }"
+    >
+      <template x-for="name in names">
+        <div class="pic-carousel-wrapper">
+          <div class="pic-carousel" x-data="{ show_second: false }">
+            <img
+              x-bind:src="`./images/${name}-summer.JPG`"
+              x-bind:alt="`${name} - summer`"
+              class="pic"
+            />
+            <img
+              x-bind:src="`./images/${name}-winter.JPG`"
+              x-bind:alt="`${name} - winter`"
+              class="pic"
+              x-show="show_second"
+              x-cloak
+            />
+
+            <div class="pic-carousel-controls">
+              <button
+                class="pic-carousel-control"
+                x-on:click="show_second = false"
+                x-bind:disabled="!show_second"
+              >
+                ←
+              </button>
+              <button
+                class="pic-carousel-control"
+                x-on:click="show_second = true"
+                x-bind:disabled="show_second"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          <template x-if="name == 'estrella'">
+            <div>
+              <div class="spacer"></div>
+
+              <div class="container">
+                <p>
+                  such a difference, no? how many visitors know that there is a
+                  harbour there? and the wintery sun shines such a unique light
+                  on the Parc, and gives its body a stark, austere look.
+
+                  <br /><br />
+
+                  would it not be amazing for everyone who visits the festival
+                  to be able to see how much this environment can change? i want
+                  to propose something to you: to print these pictures on large
+                  canvases and hang them, side by side, during the upcoming
+                  edition of Primavera (in Barcelona). it could be alongside one
+                  of the long passages between areas, where you have fencing and
+                  decoration, and there is plenty of space.
+                </p>
+              </div>
+            </div>
+          </template>
+
+          <template x-if="name == 'boiler-room'">
+            <div>
+              <div class="spacer"></div>
+
+              <div class="container">
+                <p>
+                  i'm asking you to finance the costs of printing and placement,
+                  but i don't need any additional compensation. i would just
+                  like to contribute to this wonderful summery festival, and it
+                  would be an honour for me to have these pictures on display
+                  there (:
+                </p>
+              </div>
+            </div>
+          </template>
+        </div>
+      </template>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+      <p>
+        i selected the pictures above because of their striking differences, but
+        below is an overview with all the comparisons i shot. for the pictures
+        where people are clearly identifiable, i have requested them for
+        permission.
+
+        <br /><br />
+
+        here are all the pictures i selected, side by side.
+      </p>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div
+      x-data="{ names: [
+              'lantern',
+              'ramp-down',
+              'outside-street',
+              'entrance-floor',
+              'estrella',
+              'harbour',
+              'oslo',
+              'ouigo',
+              'callum',
+              'pixa',
+              'boiler-room',
+              'amfitheatre',
+              'sunset',
+              ] }"
+    >
+      <template x-for="name in names">
+        <div class="pic-pair">
+          <img
+            x-bind:src="`./images/${name}-summer.JPG`"
+            x-bind:alt="`${name} - summer`"
+            class="pic"
+          />
+          <img
+            x-bind:src="`./images/${name}-winter.JPG`"
+            x-bind:alt="`${name} - winter`"
+            class="pic"
+          />
+        </div>
+      </template>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+      <p>
+        well, that's what i wanted to show you! i hope you enjoyed viewing these
+        pictures as much as i did taking them. if you are interested in
+        displaying them at the festival, please contact me through my
+        <a href="https://instagram.com/friedmanns.flower" target="_blank"
+          >instagram</a
+        >, or send me an email: jpjagt [at] pm [dot] me
+
+        <br /><br /><br />
+      </p>
+
+      <p style="text-align: right">amb amor,<br />july</p>
+    </div>
+
+    <div class="spacer-lg"></div>
+  </body>
+</html>
