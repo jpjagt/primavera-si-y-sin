@@ -21,7 +21,10 @@
       property="og:description"
       content="sí y sin: a proposal for a small photographic exhibition on the upcoming edition of Primavera Sound"
     />
-    <meta property="og:image" content="./images/thumbnail.jpeg" />
+    <meta
+      property="og:image"
+      content="https://jpjagt.github.io/primavera-si-y-sin/images/thumbnail.jpeg"
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -30,7 +33,10 @@
       property="twitter:description"
       content="sí y sin: a proposal for a small photographic exhibition on the upcoming edition of Primavera Sound"
     />
-    <meta property="twitter:image" content="./images/thumbnail.jpeg" />
+    <meta
+      property="twitter:image"
+      content="https://jpjagt.github.io/primavera-si-y-sin/images/thumbnail.jpeg"
+    />
 
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -93,12 +99,12 @@
         <div class="pic-carousel-wrapper">
           <div class="pic-carousel" x-data="{ show_second: false }">
             <img
-              x-bind:src="`./images/${name}-summer.JPG`"
+              x-bind:src="`https://jpjagt.github.io/primavera-si-y-sin/images/${name}-summer.JPG`"
               x-bind:alt="`${name} - summer`"
               class="pic"
             />
             <img
-              x-bind:src="`./images/${name}-winter.JPG`"
+              x-bind:src="`https://jpjagt.github.io/primavera-si-y-sin/images/${name}-winter.JPG`"
               x-bind:alt="`${name} - winter`"
               class="pic"
               x-show="show_second"
@@ -203,12 +209,12 @@
       <template x-for="name in names">
         <div class="pic-pair">
           <img
-            x-bind:src="`./images/${name}-summer.JPG`"
+            x-bind:src="`https://jpjagt.github.io/primavera-si-y-sin/images/${name}-summer.JPG`"
             x-bind:alt="`${name} - summer`"
             class="pic"
           />
           <img
-            x-bind:src="`./images/${name}-winter.JPG`"
+            x-bind:src="`https://jpjagt.github.io/primavera-si-y-sin/images/${name}-winter.JPG`"
             x-bind:alt="`${name} - winter`"
             class="pic"
           />
